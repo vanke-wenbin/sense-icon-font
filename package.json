@@ -1,16 +1,22 @@
 {
-  "name": "sense-font",
+  "name": "sense-icon-font.css",
   "version": "0.0.1",
   "description": "Icon-Font lib for sense-ui.",
+  "main": "sense-icon-font.css",
   "scripts": {
-    "build": "node ./lib/build",
-    "upload": "cross-env NODE_ENV=production sense-tools upload --bucket vanke-app --target build"
+    "create": "node ./lib/build",
+    "upload": "cross-env NODE_ENV=production sense-tools upload --bucket vanke-app --target build",
+    "build": "npm run create && npm run upload",
+    "pkg:gen": "node ./lib/package/generate",
+    "pkg:publish": "node ./lib/package/publish",
+    "pkg:build": "npm run pkg:gen && npm run pkg:publish"
   },
   "author": "Sense-UI Team",
   "license": "MIT",
   "dependencies": {
     "cross-env": "^5.1.1",
     "font-carrier": "^0.0.12",
-    "sense-tools": "^0.0.3"
-  }
+    "sense-tools": "0.0.4"
+  },
+  "devDependencies": {}
 }
