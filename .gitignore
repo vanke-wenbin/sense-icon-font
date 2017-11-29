@@ -1,5 +1,7 @@
 node_modules
 build
 
+unicode.json
+
 yarn.lock
 yarn-error.log
