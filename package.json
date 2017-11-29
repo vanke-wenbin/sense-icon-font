@@ -4,11 +4,13 @@
   "description": "Icon-Font lib for sense-ui.",
   "scripts": {
     "build": "node ./lib/build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "upload": "cross-env NODE_ENV=production sense-tools upload --bucket vanke-app --target build"
   },
   "author": "Sense-UI Team",
   "license": "MIT",
   "dependencies": {
-    "font-carrier": "^0.0.12"
+    "cross-env": "^5.1.1",
+    "font-carrier": "^0.0.12",
+    "sense-tools": "^0.0.3"
   }
 }
